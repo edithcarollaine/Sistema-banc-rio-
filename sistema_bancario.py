@@ -64,16 +64,24 @@ while opcao != 0:
     --------------------------------------------------------          
     ''')
         extrato_1 = int(input('Qual procedimento do extrato gostaria de realizar: '))
+
+
         if extrato_1 == 1:
             print(f'\nSeus saques do dia foram: R${extrato_saque}\n')
             print(f'\n\nSeu saldo atualmente é de: R$ {saldo}\n')
+
         elif extrato_1 == 2:
             print(f'\nSeus depositos do dia foram: R${extrato_deposito}\n')
             print(f'\n\nSeu saldo atualmente é de: R$ {saldo}\n')
+
         elif extrato_1 == 3:
-            print('------------ Este é seu extrato completo! ------------')
-            print(f'\n\nSeus saques do dia foram: R${extrato_saque}\n\n e Seus depositos do dia foram: R${extrato_deposito}')
-            print(f'\n\nSeu saldo atualmente é de: R$ {saldo}\n')
+            if len(extrato_saque) == 0 and len(extrato_deposito) == 0:
+                print('\n\nNenhuma movimentação\n\n')
+            else:
+                print('------------ Este é seu extrato completo! ------------')
+                print(f'\n\nSeus saques do dia foram: R${extrato_saque}\n\ne seus depositos do dia foram: R${extrato_deposito}')
+                print(f'\nSeu saldo atualmente é de: R$ {saldo}\n')
+                print('------------------------------------------------------')
         else:
             print('\n\nValor incorreto. Tente novamente!\n')
         
