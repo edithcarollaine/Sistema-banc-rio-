@@ -2,7 +2,7 @@ from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
 import textwrap
 
-''' Classes utilizando Polimorfismo, Herança simples, herança múltipla, abstração, encapsulamento '''
+''' Classes utilizando Polimorfismo, Herança simples, herança múltipla, interface e classes abstratas, encapsulamento, '''
 
 class Cliente:
     def __init__(self, endereco):
