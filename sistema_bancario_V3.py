@@ -156,7 +156,7 @@ class Deposito(Saque, Transacao):
 
 
 
-''' Funções e Menu '''
+''' Funções e Menu, fazendo interligação com as classes '''
 
 
 def menu():
